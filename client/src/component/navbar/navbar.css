@@ -15,8 +15,9 @@
     justify-content: space-between;
     position: relative;
 }
+
 .mobaile-top-left a img{
-    width: 123px;
+    width: 100px;
     height: 23px;
 }
 .mobaile-top-right{
@@ -77,4 +78,9 @@
 
 .mobaile-menubar-hide {
     display: none;
+}
+
+
+.mobaile-icon-navbar{
+    padding: 0.5rem 1rem;
 }

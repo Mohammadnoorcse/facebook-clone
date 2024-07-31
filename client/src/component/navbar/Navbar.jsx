@@ -41,7 +41,7 @@ const Navbar = () => {
                 class="fa-solid fa-bars"
                 onClick={() => setMobileMenu(!mobileMenu)}
               ></i>
-            
+              
             </div>
           </div>
 
@@ -49,7 +49,15 @@ const Navbar = () => {
             className={mobileMenu ? "mobaile-menubar" : "mobaile-menubar-hide"}
           ></div>
         </div>
-        <div className="mobaile-navbar-bottom"></div>
+        
+        <div className="mobaile-navbar-bottom">
+          {/* after working */}
+        </div>
+
+        {/* last navbar section */}
+        <div className="mobaile-icon-navbar">
+          hii
+        </div>
       </div>
       {/* mobaile navbar  end*/}
     </>
