@@ -1,7 +1,7 @@
 .mobaile-navbar{
     width: 100%;
     height: auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding-top: 5px;
     padding-left: 6px;
@@ -362,8 +362,8 @@
     cursor: pointer;
 }
 
-@media(min-width:770px){
+@media(max-width:770px){
     .mobaile-navbar{
-        display: none;
+        display: flex;
     }
 }
