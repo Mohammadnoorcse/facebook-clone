@@ -3,6 +3,10 @@ import "./desktop.css"
 import { Link } from 'react-router-dom'
 import logo from "../../assets/facebook.png"
 import profile from "../../assets/profile.jpg"
+import Chat from '../messenger/Chat'
+import { demochat } from '../demodata/DemoChat'
+import Notification from '../messenger/Notification'
+import { demonotification } from '../demodata/DemoNotification'
 
 const DesktopNavbar = () => {
     const [searchItem,setSearchItem] = useState(false);
@@ -577,6 +581,52 @@ const DesktopNavbar = () => {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* messanger */}
+      <div
+        className={` ${
+          activeLink === "/messenger" && position ? "messenger" : "display"
+        }`}
+      >
+        <div className="messenger-1">
+          <span>Chats</span>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div className="messenger-2">
+          <input type="text" placeholder="Search Messenger" />
+        </div>
+        <div className="messenger-3">
+          <span className="messenger-3-active">Inbox</span>
+          <span>Communities</span>
+        </div>
+        <div className="messenger-4">
+          {demochat.map((value) => (
+            <Chat key={value._id} value={value} />
+          ))}
+        </div>
+      </div>
+
+      {/* notification */}
+      <div
+        className={` ${
+          activeLink === "/notification" && position
+            ? "notification"
+            : "display"
+        }`}
+      >
+        <div className="notification-1">
+          <span>Notifications</span>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <div className="notification-2">
+          <span className="notification-2-active">All</span>
+          <span>Unread</span>
+        </div>
+
+        {demonotification.map((value) => (
+          <Notification key={value._id} value= {value} />
+        ))}
       </div>
     </div>
   );
