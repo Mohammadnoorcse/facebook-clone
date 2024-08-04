@@ -128,7 +128,10 @@ const DesktopNavbar = () => {
             <span>Notifications</span>
           </div>
         </div>
-        <div className="desktop-3-1 desktop-3-2">
+        <div
+          className="desktop-3-1 desktop-3-2"
+          onClick={() => handleLinkClick("/profile")}
+        >
           <img src={profile} alt="" />
 
           <div className="desktop-3-1-1">
@@ -625,8 +628,38 @@ const DesktopNavbar = () => {
         </div>
 
         {demonotification.map((value) => (
-          <Notification key={value._id} value= {value} />
+          <Notification key={value._id} value={value} />
         ))}
+      </div>
+
+      {/* profile */}
+      <div
+        className={` ${
+          activeLink === "/profile" && position ? "account" : "display"
+        }`}
+      >
+        <div className="account-1">
+          <Link to="/" className="account-1-1">
+            <img src={profile} alt="" />
+            <span>Mohammad Noor</span>
+          </Link>
+          <div className="account-1-hr"></div>
+          <Link to="/" className="account-1-1">
+            <div className="account-1-1-img">
+              <img src={profile} alt="" />
+            </div>
+            <span>Mohammad Noor</span>
+          </Link>
+          <Link to="/" className="account-1-1">
+            <div className="account-1-1-img">
+              <img src={profile} alt="" />
+            </div>
+            <span>Mohammad Noor</span>
+          </Link>
+          <div className="account-1-hr"></div>
+
+          <button className='account-1-button'>See all Profiles</button>
+        </div>
       </div>
     </div>
   );
