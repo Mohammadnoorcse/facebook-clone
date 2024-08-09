@@ -3,6 +3,7 @@ import "./desktop.css"
 import { Link } from 'react-router-dom'
 import logo from "../../assets/facebook.png"
 import profile from "../../assets/profile.jpg"
+import demo from "../../assets/demo.jpg"
 import Chat from '../messenger/Chat'
 import { demochat } from '../demodata/DemoChat'
 import Notification from '../messenger/Notification'
@@ -646,19 +647,92 @@ const DesktopNavbar = () => {
           <div className="account-1-hr"></div>
           <Link to="/" className="account-1-1">
             <div className="account-1-1-img">
-              <img src={profile} alt="" />
+              <img src={demo} alt="" />
             </div>
             <span>Mohammad Noor</span>
           </Link>
           <Link to="/" className="account-1-1">
             <div className="account-1-1-img">
-              <img src={profile} alt="" />
+              <img src={demo} alt="" />
             </div>
             <span>Mohammad Noor</span>
           </Link>
           <div className="account-1-hr"></div>
 
-          <button className='account-1-button'>See all Profiles</button>
+          <button className="account-1-button">See all Profiles</button>
+        </div>
+        <div className="account-2">
+          <div className="account-2-1">
+            <div className="account-2-1-1">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div className="account-2-1-2">
+              <span>Settings & privacy</span>
+            </div>
+          </div>
+          <div className="account-2-2">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div className="account-2">
+          <div className="account-2-1">
+            <div className="account-2-1-1">
+              <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <div className="account-2-1-2">
+              <span>Help & support</span>
+            </div>
+          </div>
+          <div className="account-2-2">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div className="account-2">
+          <div className="account-2-1">
+            <div className="account-2-1-1">
+              <i class="fa-brands fa-creative-commons-sa"></i>
+            </div>
+            <div className="account-2-1-2">
+              <span>Display & accessibility</span>
+            </div>
+          </div>
+          <div className="account-2-2">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div className="account-2">
+          <div className="account-2-1">
+            <div className="account-2-1-1">
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <div className="account-2-1-2">
+              <span>Give & feedback</span>
+            </div>
+          </div>
+          <div className="account-2-2">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div className="account-2">
+          <div className="account-2-1">
+            <div className="account-2-1-1">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+            <div className="account-2-1-2">
+              <span>Log Out</span>
+            </div>
+          </div>
+          <div className="account-2-2">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+        <div className="account-3">
+          <Link to="/">Privacy. </Link>
+          <Link to="/">Terms.</Link>
+          <Link to="/">Advertising. </Link>
+          <Link to="/">Ad Choices.</Link>
+          <Link to="/"> Cookies.</Link>
+          
         </div>
       </div>
     </div>

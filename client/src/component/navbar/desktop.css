@@ -1,7 +1,7 @@
 .desktop-navbar{
     width: 100%;
     height: 4rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* position: relative; */
     display: flex;
     justify-content: space-between;
@@ -566,6 +566,52 @@ background-color: #F0F2F5;
 }
 .account-1-hr{
     border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.account-1-button{
+    width: 100%;
+    padding: 0.4rem 0;
+    background-color: #D8DADF;
+    border-radius: 5px;
+}
+.account-2{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 7px;
+    /* margin-top: 1rem; */
+    cursor: pointer;
+}
+.account-2-1{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.account-2-1-1{
+    width: 35px;
+    height: 35px;
+    background-color: #D8DADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+}
+.account-2:hover {
+    background-color: #F0F2F5;
+}
+.account-2-1-2 span{
+    font-size: 15px;
+    font-weight: 500;
+}
+.account-3 a{
+    font-size: 14px;
+}
+.account-3 a:hover{
+    text-decoration: underline;
 }
 @media(max-width:770px){
     .desktop-navbar{
