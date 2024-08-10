@@ -1,6 +1,7 @@
 import React from 'react'
 import "./home.css"
 import HomeLeft from './HomeLeft';
+import HomeMiddle from './HomeMiddle';
 
 const Home = () => {
   return (
@@ -9,7 +10,9 @@ const Home = () => {
        <HomeLeft/>
         
       </div>
-      <div className="home-middle"></div>
+      <div className="home-middle">
+        <HomeMiddle/>
+      </div>
       <div className="home-right"></div>
     </div>
   );
