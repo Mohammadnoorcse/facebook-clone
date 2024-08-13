@@ -96,7 +96,7 @@ export const demochat=[
         name:"Mohammad Fahad",
         profile:fahad,
         text:"sad image",
-        active:fahad
+        active:true
     },
     {
         _id:13,
@@ -111,5 +111,31 @@ export const demochat=[
         profile:tonoy,
         text:"send data",
         active:true
+    },
+]
+
+
+
+export const groupData = [
+       {
+        _id:1,
+        name:"বৈষম্যবিরোধী ছাত্র সংগঠন",
+        profile:nishat,
+        text:"sob somoy",
+        active:true
+    },
+    {
+         _id:2,
+        name:"Roommate",
+        profile:moni,
+        text:"koi tui",
+        active:false
+    },
+    {
+        _id:3,
+        name:"নদীর নাম পুকুরপাড়",
+        profile:sujon,
+        text:"Video ta dekh",
+        active:false
     },
 ]

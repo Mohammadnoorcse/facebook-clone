@@ -73,7 +73,7 @@
     text-align: center;
     border-radius: 5px;
     display: none;
-    z-index: 10;
+    z-index: 1001;
 
 }
 
@@ -204,6 +204,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 500;
    
 }
 .menuItem h1{
@@ -337,6 +338,7 @@ background-color: #F0F2F5;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 1000;
 
 }
 .messenger-1,.notification-1{
@@ -505,6 +507,7 @@ background-color: #F0F2F5;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 1000;
 }
 
 .account-1{

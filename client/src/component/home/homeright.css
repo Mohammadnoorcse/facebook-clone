@@ -1,0 +1,120 @@
+.homeright{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.homeright-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.homeright-1 span,.homeright-4-1 span,.homeright-6 span{
+    font-size: 16px;
+    font-weight: 500;
+    color: #65676B;
+}
+
+.homeright-1 i{
+    font-size: 14px;
+    cursor: pointer;
+}
+.homeright-2{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+.homeright-2:hover,.homeright-3:hover{
+background-color: #E4E6E9;
+}
+.homeright-2 img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+.homeright-2 span{
+    font-size: 16px;
+    font-weight: 500;
+}
+.homeright-promation{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+.homeright-3{
+ display: flex;
+ gap: 0.5rem;
+ padding: 0.5rem 1rem;
+ align-items: center;
+ border-radius: 8px;
+}
+.homeright-3 i,.homeright-3 span{
+    font-size: 14px;
+    color: #65676B;
+}
+.homeright-hr{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.homeright-4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.homeright-4-2{
+    display: flex;
+    gap: 1rem;
+    color: #65676B;
+    align-items: center;
+}
+.homeright-4-2 i{
+    cursor: pointer;
+}
+
+.homeright-5 {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.homeright-5:hover {
+    background-color: #E4E6E9;
+}
+.homeright-5-1{
+    width: 2rem;
+    height: 2rem;
+    
+}
+.homeright-5-1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.homeright-5-2 span{
+    /* font-size: 18px; */
+    font-size: .9375rem;
+    line-height: 18px;
+    font-weight: 500;
+}
+.homeright-5-3{
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: green;
+    position: absolute;
+    top: 1.9rem;
+    left: 1.8rem;
+    border-radius: 100%;
+    border:2px solid white;
+}

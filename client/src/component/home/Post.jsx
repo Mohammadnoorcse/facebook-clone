@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import profile from "../../assets/profile.jpg"
+import Comment from './Comment';
 const Post = ({value}) => {
 
    const [hover, setHover] = useState(false);
    const [selectedEmoji, setSelectedEmoji] = useState(null);
    const [comment,setComment] = useState(false);
+   const [commentElement,setCommentElement] = useState(null);
    
   const emojis = ["😊", "😂", "😍", "🎉", "👍"];
   const handleEmojiClick = (emoji) => {
       setSelectedEmoji(emoji);
     };
+
+  const handleCommentClick =(id) =>{
+    setCommentElement(id);
+    setComment(!comment);
+  }
+
+  
   return (
     <div className="home-post">
       <div className="home-post-1">
@@ -25,49 +34,58 @@ const Post = ({value}) => {
       <div className="home-post-2">
         <span>{value.text}</span>
       </div>
-      <div className="home-post-3">
-        {value.images.length === 1 ? (
-          <>
-            <Link className="home-post-3-1" to="/image/1">
-              <img src={value.images[0]} alt="" />
-            </Link>
-          </>
-        ) : value.images.length === 2 ? (
-          <>
-            <Link className="home-post-3-2" to="/image/1">
-              <img src={value.images[0]} alt="" />
-              <img src={value.images[1]} alt="" />
-            </Link>
-          </>
-        ) : value.images.length === 3 ? (
-          <>
-            <Link className="home-post-3-3" to="/image/1">
-              <img src={value.images[0]} alt="" />
-            </Link>
-            <Link className="home-post-3-4" to="/image/1">
-              <img src={value.images[1]} alt="" />
-              <img src={value.images[2]} alt="" />
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link className="home-post-3-5" to="/image/1">
-              <img src={value.images[0]} alt="" />
-            </Link>
-            <Link className="home-post-3-6" to="/image/1">
-              <div>
+      {value.images.length > 0 && (
+        <div className="home-post-3">
+          {value.images.length === 1 ? (
+            <>
+              <Link className="home-post-3-1" to="/image/1">
+                <img src={value.images[0]} alt="" />
+              </Link>
+            </>
+          ) : value.images.length === 2 ? (
+            <>
+              <Link className="home-post-3-2" to="/image/1">
+                <img src={value.images[0]} alt="" />
                 <img src={value.images[1]} alt="" />
-              </div>
-              <div className="home-post-3-6-last">
+              </Link>
+            </>
+          ) : value.images.length === 3 ? (
+            <>
+              <Link className="home-post-3-3" to="/image/1">
+                <img src={value.images[0]} alt="" />
+              </Link>
+              <Link className="home-post-3-4" to="/image/1">
+                <img src={value.images[1]} alt="" />
                 <img src={value.images[2]} alt="" />
-                <div className="home-post-3-7">
-                  <span>+{value.images.length - 3}</span>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link className="home-post-3-5" to="/image/1">
+                <img src={value.images[0]} alt="" />
+              </Link>
+              <Link className="home-post-3-6" to="/image/1">
+                <div>
+                  <img src={value.images[1]} alt="" />
                 </div>
-              </div>
-            </Link>
-          </>
-        )}
-      </div>
+                <div className="home-post-3-6-last">
+                  <img src={value.images[2]} alt="" />
+                  <div className="home-post-3-7">
+                    <span>+{value.images.length - 3}</span>
+                  </div>
+                </div>
+              </Link>
+            </>
+          )}
+        </div>
+      )}
+
+      {value.video && (
+        <div className="home-post-7">
+          <video src={value.video} controls autoPlay muted />
+        </div>
+      )}
+
       <div className="home-post-5">
         {selectedEmoji && (
           <div className="selected-emoji">
@@ -75,9 +93,11 @@ const Post = ({value}) => {
             You and 10 others
           </div>
         )}
-        <div>
-          <span>10 comments</span>
-        </div>
+        {value.comments.length > 0 && (
+          <div>
+            <span>{value.comments.length} comments</span>
+          </div>
+        )}
       </div>
       <div className="home-post-hr"></div>
       <div className="home-post-4">
@@ -103,7 +123,7 @@ const Post = ({value}) => {
         </div>
         <div
           className="home-post-4-2 home-post-4-0"
-          onClick={() => setComment(!comment)}
+          onClick={() => handleCommentClick(`${value._id}`)}
         >
           <i class="fa-regular fa-comment"></i>
           <span>Comment</span>
@@ -118,8 +138,14 @@ const Post = ({value}) => {
         </div>
       </div>
       <div className="home-post-hr"></div>
-      <div className="home-post-6">
-        <div className={comment ? "home-post-6-1" : "mobaile-post-hide"}>
+      <div
+        className={
+          commentElement === `${value._id}` && comment
+            ? "home-post-6"
+            : "mobaile-post-hide"
+        }
+      >
+        <div className="home-post-6-1">
           <div className="home-post-6-1-1">
             <img src={profile} alt="" />
           </div>
@@ -143,6 +169,9 @@ const Post = ({value}) => {
           </div>
         </div>
         {/* comment */}
+        {value.comments.map((item, index) => (
+          <Comment key={index} item={item} />
+        ))}
       </div>
     </div>
   );
