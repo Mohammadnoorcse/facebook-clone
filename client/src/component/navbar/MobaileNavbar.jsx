@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/facebook-logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import profile from "../../assets/profile.jpg";
 
 const colors = [
@@ -63,6 +63,9 @@ const MobaileNavbar = () => {
       ? "placeholder-black"
       : "placeholder-white";
   };
+
+  const { pathname } = useLocation();
+  
   return (
     <div className="mobaile-navbar ">
       <div className="mobaile-navbar-top">
@@ -151,7 +154,14 @@ const MobaileNavbar = () => {
         </div>
       </div>
       <div className="hr-mobaile"></div>
-      <div className="mobaile-icon-navbar-second">
+      {/* mobaile  search item */}
+      <div
+        className={
+          pathname === "/profile"
+            ? "mobaile-menubar-hide"
+            : "mobaile-icon-navbar-second"
+        }
+      >
         <div className="mobaile-icon-navbar-second-1">
           <Link to="/profile">
             <img src={profile} alt="" />
@@ -179,7 +189,11 @@ const MobaileNavbar = () => {
           />
         </div>
       </div>
-      <div className="hr-mobaile"></div>
+      <div className={
+          pathname === "/profile"
+            ? "mobaile-menubar-hide"
+            : "hr-mobaile"
+        }></div>
 
       <div
         className={
