@@ -11,7 +11,7 @@ const HomeLeft = () => {
         <span>Mohammad Noor</span>
       </Link>
       {leftData.map((value, index) => (
-        <Link className="left-item" to="/item-1" key={index}>
+        <Link className="left-item" to={value.link} key={index}>
           <i className={value.icon} style={{ color: `${value.color}` }}></i>
           <span>{value.name}</span>
         </Link>

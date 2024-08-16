@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
-import profile from "../../assets/profile.jpg"
+import img1 from "../../assets/profile.jpg"
 import Comment from './Comment';
-const Post = ({value}) => {
+const Post = ({value,profile}) => {
 
    const [hover, setHover] = useState(false);
    const [selectedEmoji, setSelectedEmoji] = useState(null);
@@ -21,7 +21,7 @@ const Post = ({value}) => {
 
   
   return (
-    <div className="home-post">
+    <div className={profile ? "profile-post-cj" : "home-post"}>
       <div className="home-post-1">
         <Link className="home-post-1-1" to="/profile">
           <img src={value.profile} alt="" />
@@ -147,7 +147,7 @@ const Post = ({value}) => {
       >
         <div className="home-post-6-1">
           <div className="home-post-6-1-1">
-            <img src={profile} alt="" />
+            <img src={img1} alt="" />
           </div>
           <div className="home-post-6-1-2">
             <form action="">

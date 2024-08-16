@@ -6,7 +6,7 @@ import HomeRight from './HomeRight';
 
 const Home = () => {
   const [mobailePost, setMobailePost] = useState(false);
-  console.log(mobailePost)
+  
   return (
     <div className={mobailePost ? "home-background" : "home"}>
       <div className="home-left">

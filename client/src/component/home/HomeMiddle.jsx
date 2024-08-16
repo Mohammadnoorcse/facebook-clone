@@ -27,6 +27,8 @@ const HomeMiddle = ({mobailePost,setMobailePost}) => {
     //  const [mobailePost, setMobailePost] = useState(false);
      const fileInputRef = useRef(null);
 
+     const profile = false;
+
     const scrollLeft = () => {
         scrollerRef.current.scrollBy({
           left: -200, // Adjust this value for how far to scroll on each click
@@ -279,7 +281,7 @@ const HomeMiddle = ({mobailePost,setMobailePost}) => {
 
       {
         postDemo.map((value)=>(
-          <Post key={value._id} value={value}/>
+          <Post key={value._id} value={value} profile={profile}/>
         ))
       }
     </div>

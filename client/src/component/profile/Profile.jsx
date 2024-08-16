@@ -10,12 +10,14 @@ import ProfileVideos from './ProfileVideos'
 const Profile = () => {
 
   const [activeLink, setActiveLink] = useState("post");
+  const [model, setModel] = useState(false);
 
    const navigateToSection = (section) => {
       setActiveLink(section);
    };
+   
   return (
-    <div className="profile">
+    <div className={model ? "profile-click" : "profile"}>
       <div className="profile-head">
         <div className="profile-cover">
           <div className="profile-cover-1">
@@ -146,14 +148,33 @@ const Profile = () => {
         </div>
       </div>
       <div className="profile-section">
-        {
-          activeLink==="post"?<><ProfilePost/></>:
-          activeLink=== "about"?<><ProfileAbout/></>:
-          activeLink === "friends"?<><ProfileFriends/></>:
-          activeLink === "photos"?<><ProfilePhotos/></>:
-          activeLink === "videos"?<><ProfileVideos/></>:
-          activeLink == "more"?<><span>working</span></>:<></>
-        }
+        {activeLink === "post" ? (
+          <>
+            <ProfilePost model={model} setModel={setModel} />
+          </>
+        ) : activeLink === "about" ? (
+          <>
+            <ProfileAbout />
+          </>
+        ) : activeLink === "friends" ? (
+          <>
+            <ProfileFriends />
+          </>
+        ) : activeLink === "photos" ? (
+          <>
+            <ProfilePhotos />
+          </>
+        ) : activeLink === "videos" ? (
+          <>
+            <ProfileVideos />
+          </>
+        ) : activeLink == "more" ? (
+          <>
+            <span>working</span>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

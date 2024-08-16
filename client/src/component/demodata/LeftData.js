@@ -3,13 +3,14 @@ export const leftData =[
         icon:"fa-solid fa-user-group",
         name:"Friends",
         color:"#1979E8",
+        link:'friends'
 
     },
     {
         icon:"fa-solid fa-clock",
         name:"Memories",
         color:"#5ACCBE",
-        
+        link:'memories'
        
         
 
@@ -18,7 +19,7 @@ export const leftData =[
         icon:"fa-solid fa-bookmark",
         name:"Saved",
         color:"#B341BB",
-        
+        link:'saved'
 
     },
     
@@ -26,14 +27,14 @@ export const leftData =[
         icon:"fa-solid fa-house",
         name:"Marketplace",
         color:"#41B4CD",
-        
+        link:'marketplace'
 
     },
     {
         icon:"fa-solid fa-chevron-down",
         name:"See more",
         color:"#050505",
-        
+        link:'seemore'
 
     },
 ]

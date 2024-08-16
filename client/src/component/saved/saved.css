@@ -1,0 +1,11 @@
+.saved {
+    width: 100%;
+    height: 100vh;
+    background-color: #F0F2F5;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    padding-top: 3rem;
+
+}

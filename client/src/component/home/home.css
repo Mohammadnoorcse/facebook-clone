@@ -355,13 +355,16 @@ background-color: #D8DADF;
 .homemiddle-2-2-1{
     width: 12rem;
     height: 1.8rem;
-    background-color: #F2F2F2;
+   
     border-radius: 0.5rem;
     cursor: pointer;
     display: flex;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+}
+.homemiddle-2-2-1:hover{
+background-color: #F2F2F2;
 }
 .homemiddle-2-2-1 i{
     font-size: 20px;
@@ -605,6 +608,17 @@ background-color: #D8DADF;
     background-color: white;
     border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.profile-post-cj{
+    padding: 0.5rem;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
